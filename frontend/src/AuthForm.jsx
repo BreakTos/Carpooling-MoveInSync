@@ -19,7 +19,7 @@ export default function AuthForm() {
       return;
     }
 
-    const endpoint = mode === 'login' ? 'http://localhost:8080/auth/login' : 'http://localhost:8080/auth/signup';
+    const endpoint = mode === 'login' ? 'https://tbppp.centralindia.cloudapp.azure.com/auth/login' : 'https://tbppp.centralindia.cloudapp.azure.com/auth/signup';
 
     try {
       const response = await axios.post(endpoint, { email, password });

@@ -45,7 +45,7 @@ export default function RideCard({ ride, activeChatId, setActiveChatId, details 
 
     const fetchMessages = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/chat/messages', {
+        const res = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/chat/messages', {
           params: {
             userA: currentUser,
             userB: ride.driver,
@@ -86,7 +86,7 @@ export default function RideCard({ ride, activeChatId, setActiveChatId, details 
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const res = await axios.post('http://localhost:8080/ride/status', {
+        const res = await axios.post('https://tbppp.centralindia.cloudapp.azure.com/ride/status', {
           userMail: currentUser,
           driverMail: ride.driver,
         });
@@ -114,7 +114,7 @@ export default function RideCard({ ride, activeChatId, setActiveChatId, details 
     };
 
     try {
-      await axios.post('http://localhost:8080/chat/send', message);
+      await axios.post('https://tbppp.centralindia.cloudapp.azure.com/chat/send', message);
       setMessageInput('');
     } catch (err) {
       console.error('Sending message failed', err);
@@ -132,7 +132,7 @@ export default function RideCard({ ride, activeChatId, setActiveChatId, details 
       const locationMsg = `📍 Location: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
 
       try {
-        await axios.post('http://localhost:8080/chat/send', {
+        await axios.post('https://tbppp.centralindia.cloudapp.azure.com/chat/send', {
           senderMail: currentUser,
           receiverMail: ride.driver,
           text: locationMsg,
@@ -159,7 +159,7 @@ export default function RideCard({ ride, activeChatId, setActiveChatId, details 
 
     try {
       
-      const res = await axios.post('http://localhost:8080/ride/join',message);
+      const res = await axios.post('https://tbppp.centralindia.cloudapp.azure.com/ride/join',message);
       // console.log(res.data.error);
       if(res.status === 200){
         alert("book request sent");

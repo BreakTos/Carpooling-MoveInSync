@@ -21,7 +21,7 @@ export default function CreateRideForm() {
     const rideData = { driver, pickup, drop, departure, seats, vehicle, plate, prefs };
     console.log(" pick up " + pickup) 
   try {
-    const response = await axios.post('http://localhost:8080/ride/create', rideData);
+    const response = await axios.post('https://tbppp.centralindia.cloudapp.azure.com/ride/create', rideData);
     console.log("✅ Ride created:", response.data);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 2000);

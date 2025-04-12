@@ -19,7 +19,7 @@ export default function RidesCreated() {
   useEffect(() => {
     const fetchCreatedRides = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/ride/created', {
+        const res = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/ride/created', {
           params: { creator: currentUserEmail },
         });
         console.log(res.data.rides);
@@ -33,7 +33,7 @@ export default function RidesCreated() {
 
     const fetchInvites = async () => {
         try {
-          const res = await axios.get('http://localhost:8080/ride/invites', {
+          const res = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/ride/invites', {
             params: { driverMail: currentUserEmail },
           });
           setInvites(res.data.invites);
@@ -48,7 +48,7 @@ export default function RidesCreated() {
 
   const handleAccept = async (userMail) => {
     try {
-      await axios.post('http://localhost:8080/ride/accept', { userMail, driverMail: currentUserEmail });
+      await axios.post('https://tbppp.centralindia.cloudapp.azure.com/ride/accept', { userMail, driverMail: currentUserEmail });
       setInvites(prev => prev.filter(invite => invite.userMail !== userMail));
     } catch (err) {
       console.error("Accept failed", err);
@@ -57,7 +57,7 @@ export default function RidesCreated() {
   
   const handleDecline = async (userMail) => {
     try {
-      await axios.post('http://localhost:8080/ride/reject', { userMail, driverMail: currentUserEmail });
+      await axios.post('https://tbppp.centralindia.cloudapp.azure.com/ride/reject', { userMail, driverMail: currentUserEmail });
       setInvites(prev => prev.filter(invite => invite.userMail !== userMail));
     } catch (err) {
       console.error("Decline failed", err);

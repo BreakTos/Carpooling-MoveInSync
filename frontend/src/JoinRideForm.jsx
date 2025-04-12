@@ -17,7 +17,7 @@ export default function JoinRideForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/ride/find', { pickup, drop, departure, prefs });
+      const response = await axios.post('https://tbppp.centralindia.cloudapp.azure.com/ride/find', { pickup, drop, departure, prefs });
       setRides(response.data.rides || []);
     } catch (error) {
       console.error('Error fetching rides:', error);

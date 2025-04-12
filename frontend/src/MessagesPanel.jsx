@@ -14,14 +14,14 @@ export default function MessagesPanel() {
   useEffect(() => {
     const fetchConversations = async () => {
       try {
-        const usersRes = await axios.get('http://localhost:8080/auth/alll');
+        const usersRes = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/auth/alll');
         console.log(usersRes.length);
         const users = usersRes.data.filter(u => u.email !== currentUser);
 
         const activeConversations = [];
 
         for (const user of users) {
-          const res = await axios.get('http://localhost:8080/chat/messages', {
+          const res = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/chat/messages', {
             params: { userA: currentUser, userB: user.email }
           });
 
@@ -59,14 +59,14 @@ export default function MessagesPanel() {
     if (!text) return;
 
     try {
-      await axios.post('http://localhost:8080/chat/send', {
+      await axios.post('https://tbppp.centralindia.cloudapp.azure.com/chat/send', {
         senderMail: currentUser,
         receiverMail,
         text
       });
 
       // Refetch messages
-      const res = await axios.get('http://localhost:8080/chat/messages', {
+      const res = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/chat/messages', {
         params: { userA: currentUser, userB: receiverMail }
       });
 

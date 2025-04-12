@@ -11,7 +11,7 @@ export default function EmergencyTab() {
   useEffect(() => {
     const fetchFamily = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/auth/family', {
+        const res = await axios.get('https://tbppp.centralindia.cloudapp.azure.com/auth/family', {
           params: { userEmail: currentUser },
         });
         setFamily(res.data.family || []);
@@ -26,7 +26,7 @@ export default function EmergencyTab() {
   const addContact = async () => {
     if (!newEmail.trim()) return;
     try {
-      const res = await axios.post('http://localhost:8080/auth/addfamily', {
+      const res = await axios.post('https://tbppp.centralindia.cloudapp.azure.com/auth/addfamily', {
         userEmail: currentUser,
         familyEmail: newEmail,
       });
@@ -47,7 +47,7 @@ export default function EmergencyTab() {
       const { latitude, longitude } = position.coords;
   
       try {
-        await axios.post('http://localhost:8080/auth/sos', {
+        await axios.post('https://tbppp.centralindia.cloudapp.azure.com/auth/sos', {
           userEmail: currentUser,
           location: {
             latitude,
