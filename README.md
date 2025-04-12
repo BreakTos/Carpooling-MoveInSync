@@ -9,8 +9,8 @@ This repository contains the **frontend and backend** for the CarPooling System 
 
 ## 🌐 Deployment
 
-- **Backend**: Hosted on Microsoft Azure VM  
-- **Frontend**: Live on Vercel
+- **Backend**: Hosted on Microsoft Azure VM => [Example route for all registered users](https://tbppp.centralindia.cloudapp.azure.com/auth/alll)
+- **Frontend**: Live on Vercel => [Deployment link](https://carpooling-move-in-sync.vercel.app/)
 
 ---
 
