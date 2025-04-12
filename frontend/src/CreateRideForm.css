@@ -1,0 +1,132 @@
+.create-ride-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .create-ride-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .create-ride-form input[type="text"],
+  .create-ride-form input[type="datetime-local"],
+  .create-ride-form input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .preferences {
+    grid-column: span 2;
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  
+  .create-btn {
+    grid-column: span 2;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-row > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"],
+  input[type="number"] {
+    padding: 0.65rem;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    transition: 0.2s border ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
+  
+  .prefs {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .prefs label {
+    font-weight: 500;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .submit-btn {
+    width: 50%;
+    padding: 0.9rem;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-right: 0;
+    margin-left: auto;
+}
+  
+  .submit-btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+
+  .toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4BB543;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeInOut 3s ease forwards;
+  z-index: 1000;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}

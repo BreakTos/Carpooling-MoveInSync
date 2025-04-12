@@ -1,0 +1,50 @@
+.metro-selector {
+    margin-bottom: 1.5rem;
+  }
+  
+  .metro-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .metro-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 10px;
+    position: relative;
+    overflow-x: auto;
+  }
+  
+  .metro-stop {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    position: relative;
+    color: #555;
+  }
+  
+  .metro-stop .marker {
+    width: 12px;
+    height: 12px;
+    background: #999;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .metro-stop.selected .marker {
+    background: #2563eb;
+  }
+  
+  .metro-stop.selected .stop-name {
+    font-weight: bold;
+    color: #2563eb;
+  }
+  
+  

@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.role {
+  font-size: 13px;
+  color: #777;
+}
+
+.nav-menu button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: #f5f7fa;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.nav-menu button:hover,
+.nav-menu button.active {
+  background-color: #1e88e5;
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f0f4f8;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #1e88e5;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.dashboard {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 75vh;
+  min-height: 75vh;
+  /* Adjust height as needed */
+  padding-right: 8px;
+}

@@ -1,0 +1,79 @@
+.create-ride-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .create-ride-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .create-ride-form input[type="text"],
+  .create-ride-form input[type="datetime-local"],
+  .create-ride-form input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .preferences {
+    grid-column: span 2;
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  
+  .join-btn {
+    grid-column: span 2;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 30vw;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-row > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"],
+  input[type="number"] {
+    padding: 0.65rem;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    transition: 0.2s border ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
+  
