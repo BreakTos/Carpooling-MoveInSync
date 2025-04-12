@@ -163,6 +163,7 @@ export default function RideCard({ ride, activeChatId, setActiveChatId, details 
       // console.log(res.data.error);
       if(res.status === 200){
         alert("book request sent");
+        setBookingStatus('pending')
       }
 
     } catch (error) {

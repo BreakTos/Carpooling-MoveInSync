@@ -2,8 +2,8 @@ const { EqualsOperation } = require('sift');
 const Ride = require('../models/Ride');
 
 const route = [
-  "Taj Mahal", "Metro Station", "Moveinsync HSR",
-  "Banglore Airport", "High Court", "GLA Uni"
+  "Jammu", "UttarPradesh", "Maharashtra",
+  "Goa", "TamilNadu", "SriLanka"
 ];
 
 const createRide = async (req, res) => {

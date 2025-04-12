@@ -2,8 +2,8 @@ import React from 'react';
 import './MetroSelector.css';
 
 const stops = [
-  "Taj Mahal", "Metro Station", "Moveinsync HSR",
-  "Banglore Airport", "High Court", "GLA Uni"
+  "Jammu", "UttarPradesh", "Maharashtra",
+  "Goa", "TamilNadu", "SriLanka"
 ];
 
 export default function MetroSelector({ label, selected, setSelected }) {
