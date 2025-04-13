@@ -76,5 +76,29 @@ The server will be listening on PORT 8080 and frontend on PORT 5173.
 
 ![System Design](https://github.com/user-attachments/assets/7a1e131f-e30b-4bae-81df-4416593bb394)
 
+---
+
+## 📁 Backend structure
+
+    ├── README.md
+    ├── backend/
+    │   ├── index.js
+    │   ├── package.json
+    │   ├── .env
+    │   ├── controllers/
+    │   │   ├── authController.js
+    │   │   ├── chatController.js
+    │   │   └── rideController.js
+    │   ├── db/
+    │   │   └── connectDb.js
+    │   ├── models/
+    │   │   ├── Chat.js
+    │   │   ├── Ride.js
+    │   │   └── User.js
+    │   └── routes/
+    │       ├── authRoutes.js
+    │       ├── chatRoutes.js
+    │       └── rideRoutes.js
+
 
 
