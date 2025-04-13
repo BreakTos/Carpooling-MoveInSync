@@ -70,5 +70,11 @@ npm run dev
 
 The server will be listening on PORT 8080 and frontend on PORT 5173.
 
+---
+
+## 🧠 High-Level Architecture
+
+![System Design](https://github.com/user-attachments/assets/7a1e131f-e30b-4bae-81df-4416593bb394)
+
 
 
