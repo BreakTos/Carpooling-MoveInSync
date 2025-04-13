@@ -2,6 +2,10 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { Resend } = require('resend');
+const NodeCache = require('node-cache');
+
+
+const cache = new NodeCache({ stdTTL: 300 });
 
 
 const signupController = async (req, res) => {
@@ -44,7 +48,12 @@ const loginController = async (req, res) => {
 
 const allController = async (req, res) => {
   try {
+    const cachedUsers = cache.get('all_users');
+    if (cachedUsers) {
+      return res.status(200).json(cachedUsers);
+    }
     const users = await User.find({}, 'email'); // just get email field
+    cache.set('all_users', users);
     res.json(users);
   } catch (err) {
     console.error("Failed to fetch users:", err);
